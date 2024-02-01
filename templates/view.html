@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/ig.jpg'); /* Path to your image file */
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff; /* Apply glow to text */
+        }
+
+        .text-box {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #c038e2a6;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: glow 2s infinite alternate; /* Apply glow animation */
+        }
+
+        p {
+            color: #fbd7d7;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff; /* Apply glow to text */
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px #c038e2a6, 0 0 20px #c038e2a6, 0 0 30px #c038e2a6;
+            }
+            to {
+                box-shadow: 0 0 20px #c038e2a6, 0 0 30px #c038e2a6, 0 0 40px #c038e2a6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-box">
+        <h1>投稿テキスト</h1>
+        <p>{{ submitted_text }}</p>
+    </div>
+</body>
+</html>
